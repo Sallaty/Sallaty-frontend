@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #F5F5F5;
+  --foreground: #2D7D7D;
+  --card: #FFFFFF;
+  --card-foreground: #2D7D7D;
+  --popover: #FFFFFF;
+  --popover-foreground: #2D7D7D;
+  --primary: #2D7D7D;
+  --primary-foreground: #FFFFFF;
+  --secondary: #FF8C00;
+  --secondary-foreground: #FFFFFF;
+  --muted: #F5F5F5;
+  --muted-foreground: #666666;
+  --accent: #FF8C00;
+  --accent-foreground: #FFFFFF;
+  --destructive: #ef4444;
+  --border: #e5e5e5;
+  --input: #FFFFFF;
+  --ring: #2D7D7D;
+  --chart-1: #2D7D7D;
+  --chart-2: #FF8C00;
+  --chart-3: #398080;
+  --chart-4: #FFB366;
+  --chart-5: #1A5F5F;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #2D7D7D;
+  --sidebar-primary: #2D7D7D;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #FF8C00;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: #2D7D7D;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Cairo', 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+/* Custom styles for Sallaty app */
+.mobile-container {
+  max-width: 375px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--background);
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.sallaty-primary {
+  background-color: #2D7D7D;
+  color: white;
+}
+
+.sallaty-secondary {
+  background-color: #FF8C00;
+  color: white;
+}
+
+.card-shadow {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Arabic font improvements */
+.arabic-text {
+  font-family: 'Cairo', 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
